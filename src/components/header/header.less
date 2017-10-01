@@ -1,0 +1,17 @@
+//Header
+//--
+@layout-header-background: #fff;
+@layout-sider-background: #283f68;
+@header-height: 64px;
+
+.custom-header {
+	height: @header-height;
+	background-color: @layout-header-background;
+	padding: 0 20px;
+	.trigger {
+		@trigger-icon-height: 12px;
+		float: left;
+		color: @layout-sider-background;
+		margin: (@header-height - @trigger-icon-height) / 2 10px;
+	}
+}

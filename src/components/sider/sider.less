@@ -1,0 +1,56 @@
+@layout-sider-background: #283f68;
+@header-height: 64px;
+
+.ant-menu-item:active, .ant-menu-submenu-title:active {
+	background-color: @layout-sider-background;
+}
+.custom-sider {
+	background-color: @layout-sider-background;
+	.menu {
+		background-color: @layout-sider-background;
+		border: 0;
+		.menu-item, .ant-menu-submenu-title {
+			left: 0;
+			.anticon, .nav-text, > span {
+				color: rgba(255, 255, 255, 0.67);
+			}
+			&:hover {
+				.anticon, .nav-text, >span, &:after {
+					color: #fff;
+				}
+			}
+			&:after {
+				color: rgba(255, 255, 255, 0.67);
+			}
+		}
+		.ant-menu-submenu > .ant-menu {
+    		background-color:  @layout-sider-background;
+    	}
+		.ant-menu-item-selected {
+			background-color: lighten(@layout-sider-background, 10%);
+			.anticon {
+				color: #fff;
+			}
+			.nav-text {
+				color: #fff;
+			}
+		}
+	}
+	.ant-menu-inline .ant-menu-item:after, 
+	.ant-menu-vertical .ant-menu-item:after {
+		border: 0;
+	}
+}
+.logo {
+	width: 100%;
+	height: @header-height;
+	line-height: @header-height;
+	background-color: @layout-sider-background;
+	flex-wrap: nowrap;
+	.system-name {
+		color: #fff;
+		white-space: nowrap;
+    	text-overflow: ellipsis;
+    	overflow: hidden;
+	}
+}
